@@ -1,7 +1,11 @@
 {
   "name": "nyt-article-archiver",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
   "repository": "git@github.com:alejandroharb/nyt-article-archiver.git",
   "author": "alejandro harb",
   "license": "MIT",
