@@ -10,6 +10,7 @@
   "author": "alejandro harb",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.15.3",
     "express": "^4.15.2",
     "mongojs": "^2.4.0",
     "mongoose": "^4.9.0",
