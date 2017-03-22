@@ -1,12 +1,10 @@
-var React = require('react');
+import React from 'react';
 import Search from './Search';
 
 class Main extends React.Component {
     render() {
-        return(
+        return (
             <Search />
-        );
+        )
     }
 }
-
-module.exports = Main;
