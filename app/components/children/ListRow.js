@@ -8,7 +8,7 @@ class ListRow extends React.Component {
         return(
             <div className="row">
                 <div  className="col-sm-9">
-                    <h4>{this.props.headline}}</h4>
+                    <h4>{this.props.headline}</h4>
                 </div>
                 <div className="col-sm-3">
                     <button 
