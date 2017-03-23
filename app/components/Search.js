@@ -1,17 +1,19 @@
 var React = require('react');
 import Form from './children/Form';
 import helpers from './utils/helpers';
-
+var Results = require('./Results');
 class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             searchTerm: "",
             startDate: "",
-            endDate: ""
+            endDate: "",
+            results:[]
         }
 
         this.setSearch = this.setSearch.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
     componentDidMount() {
 
@@ -25,8 +27,10 @@ class Search extends React.Component {
         const query = "&?q=" + this.state.searchTerm;
         const startDate = "?begin_date=" + this.state.startDate;
         const endDate = "?end_date=" + this.state.endDate;
-        helpers.runAPI(query, startDate, endDate).then(function (data) {
-            console.log(data);
+        var that = this;
+        helpers.runAPI(query, startDate, endDate).then(function (res) {
+            console.log(res.data.response.docs);
+            that.setState({results: res.data.response.docs})
         });
         //============
     }
@@ -42,9 +46,15 @@ class Search extends React.Component {
     }
     render() {
         return (
-            <Form setSearch={this.setSearch} />
+            <div className="container">
+                <div className="row">
+                    <Form setSearch={this.setSearch} />
+                    <Results results={this.state.results} />
+                </div>
+            </div>
+               
         );
     }
 }
 
-module.exports = Main;
+module.exports = Search;

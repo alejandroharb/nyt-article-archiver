@@ -7,6 +7,7 @@ var helpers = {
         return axios.get(url)
             .then(function (response) {
                 console.log(response);
+                return response;
             });
     }
 };
