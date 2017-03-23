@@ -11,10 +11,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "moment": "^2.18.1",
     "mongojs": "^2.4.0",
     "mongoose": "^4.9.0",
+    "path": "^0.12.7",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

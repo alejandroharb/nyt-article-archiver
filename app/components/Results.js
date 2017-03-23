@@ -6,7 +6,7 @@ class Results extends React.Component {
         super(props);
         
     }
-
+    
     render() {
         return(
             <div className="container">
@@ -24,6 +24,8 @@ class Results extends React.Component {
                                                 <ListRow 
                                                     key={i.toString()}
                                                     headline={article.headline.main}
+                                                    date={article.pub_date}
+                                                    url={article.web_url}
                                                 />
                                             );
                                         })}

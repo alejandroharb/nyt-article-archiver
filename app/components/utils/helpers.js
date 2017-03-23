@@ -9,6 +9,9 @@ var helpers = {
                 console.log(response);
                 return response;
             });
+    },
+    saveArticleData: function(data) {
+        return axios.post("/api/saved", data);
     }
 };
 
