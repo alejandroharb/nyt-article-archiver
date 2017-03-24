@@ -17,7 +17,8 @@ class ListRow extends React.Component {
                         <Button   
                             headline={this.props.headline}
                             date={this.props.date}
-                            url={this.props.url}    
+                            url={this.props.url}
+                            articleId={this.props.articleId}
                             buttonAction={this.props.buttonAction}    
                             style={this.props.btnStyle}    
                             className="btn btn-success"

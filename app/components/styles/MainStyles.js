@@ -1,22 +1,29 @@
 
 const styles = {
-    buttonStyle: {
-        marginTop: "20px",
-        marginBottom:"20px"
-    },
     saveBtnStyle: {
-        backgroundColor: "green",
+        backgroundColor: "#4CAF50",
+        color: '#FAFAFA',
         paddingTop: "10px",
         paddingBottom: "10px",
         paddingLeft: "10px",
         paddingRight: "10px",
     },
     deleteBtnStyle: {
-        backgroundColor: "red",
+        backgroundColor: "#B71C1C",
+        color: "#FAFAFA",
         paddingTop: "10px",
         paddingBottom: "10px",
         paddingLeft: "10px",
         paddingRight: "10px",
+    },
+    submitBtnStyle: {
+        backgroundColor: '#337ab7',
+        color: '#FAFAFA',
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: "15px",
+        marginBottom:"15px"
     }
 }
 

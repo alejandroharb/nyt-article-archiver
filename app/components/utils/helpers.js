@@ -6,7 +6,6 @@ var helpers = {
         url += nytKey += query += start += end;
         return axios.get(url)
             .then(function (response) {
-                console.log(response);
                 return response;
             });
     },
@@ -17,9 +16,7 @@ var helpers = {
         return axios.get("/api/saved");
     },
     deleteArticleData: function (data) {
-        console.log("data in helpers")
-        console.log(data)
-        return axios.delete("/api/saved", {params: {url: data.url}})
+        return axios.delete("/api/saved/" + data)
     }
 };
 

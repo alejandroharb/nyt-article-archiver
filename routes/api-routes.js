@@ -40,18 +40,13 @@ module.exports = function(app) {
             }
         })
     });
-    app.delete('/api/saved', (req, res) => {
+    app.delete('/api/saved/:id', (req, res) => {
         //delte saved article in the database
-        console.log(req.body)
-        console.log(req.params.url)
-        console.log(req.params)
-        Article.remove({ url: req.body.url }, function (err,doc) {
+        Article.remove({ _id: req.params.id }, function (err,doc) {
             if (err) {
                 console.log(err);
             } else {
-                console.log("=====deleted=====")
-                // console.log(doc)
-                res.send("deleted article from archive");
+                res.send(doc);
             }
         })
     });

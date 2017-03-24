@@ -95,7 +95,7 @@ class Form extends React.Component {
                                             onChange={this.handleChange}
                                         />
                                         <Button
-                                        style={styles.buttonStyle}  
+                                        style={styles.submitBtnStyle}  
                                         type="submit"
                                         btnText="Submit"
                                             />

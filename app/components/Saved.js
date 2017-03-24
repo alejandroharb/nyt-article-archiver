@@ -20,6 +20,7 @@ export default class Saved extends React.Component {
         })
     }
     handleData(data) {
+
         this.setState({ articles: data });
     }
     render() {
@@ -44,6 +45,7 @@ export default class Saved extends React.Component {
                                             headline={article.title}
                                             date={article.date}
                                             url={article.url}
+                                            articleId={article._id}
                                         />
                                     )
                                 })}
