@@ -1,6 +1,8 @@
 var React = require('react');
 var helpers = require('../utils/helpers');
 var moment = require('moment');
+import Button from './Button';
+import styles from './../styles/MainStyles';
 
 class Form extends React.Component {
     constructor(props) {
@@ -46,7 +48,6 @@ class Form extends React.Component {
 
     render() {
         return (
-            <div className="container" >
                 <div className="row" >
                     <div className="col-sm-12" >
                         <div className="panel panel-primary" >
@@ -93,17 +94,17 @@ class Form extends React.Component {
                                             type="text"
                                             onChange={this.handleChange}
                                         />
-                                        <button className="btn btn-primary"
-                                            type="submit" >
-                                            Submit
-                                        </button>
+                                        <Button
+                                        style={styles.buttonStyle}  
+                                        type="submit"
+                                        btnText="Submit"
+                                            />
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }

@@ -12,8 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-var Article = require('./models/Article.js');
-
 //catch any database errors
 db.on("error", function (error) {
     console.log("Database error: ", error);
@@ -22,7 +20,9 @@ db.on("error", function (error) {
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
-app.use(express.static(".public"));
+app.use(express.static("public"));
+
+var Article = require('./models/Article.js');
 
 //Server port
 var PORT = process.env.PORT || 3000;

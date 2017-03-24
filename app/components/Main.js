@@ -1,16 +1,13 @@
 import React from 'react';
 import Search from './Search';
-
+import Saved from './Saved';
 
 class Main extends React.Component {
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <Search />
-                    </div>
-                </div>
+            <div>
+                <Search />
+                <Saved />
             </div>
         );
     }

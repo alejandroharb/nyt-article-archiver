@@ -6,7 +6,6 @@ var ArticleSchema = new Schema({
     title: {
         type: String,
         require: true,
-        unique: true
     },
     date: {
         type: Date,

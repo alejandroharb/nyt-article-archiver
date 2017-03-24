@@ -48,8 +48,12 @@ class Search extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <Form setSearch={this.setSearch} />
-                    <Results results={this.state.results} />
+                    <div className="col-md-6">
+                        <Form setSearch={this.setSearch} />
+                    </div>
+                    <div className="col-md-6">
+                        <Results results={this.state.results} />
+                    </div>
                 </div>
             </div>
                

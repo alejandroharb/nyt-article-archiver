@@ -12,6 +12,14 @@ var helpers = {
     },
     saveArticleData: function(data) {
         return axios.post("/api/saved", data);
+    },
+    getArticles: function (data) {
+        return axios.get("/api/saved");
+    },
+    deleteArticleData: function (data) {
+        console.log("data in helpers")
+        console.log(data)
+        return axios.delete("/api/saved", {params: {url: data.url}})
     }
 };
 
