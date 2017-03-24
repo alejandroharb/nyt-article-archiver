@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 
 var path = require('path')
 //local connection to database
-mongoose.connect('mongodb://localhost/nytreact');
+mongoose.connect('mongodb://heroku_3cp6j0qh:8b7qqpecp59f4nobmgi6r0et9c@ds141450.mlab.com:41450/heroku_3cp6j0qh');
+// mongoose.connect('mongodb://localhost/nytreact');
 mongoose.Promise = Promise;
 
 
